@@ -7,8 +7,13 @@
     <p>(Non :)) exhaustive guidelines and tips for (more or less) popular third party services.</p>
 </div>
 
+<h1>Table of contents</h1>
+<div id="toc"></div>
+
 <!-- /////////////////////////////////////////////////////////////// -->
-<?php echo mdFileToHTML(GUIDELINES_FILE, false)?>
+<div id="guidelines">
+    <?php echo mdFileToHTML(GUIDELINES_FILE, false)?>
+</div>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <?php include "includes/footer.php" ?>

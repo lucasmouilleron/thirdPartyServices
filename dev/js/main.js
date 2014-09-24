@@ -9,7 +9,8 @@ require.config({
         "bootstrap": "vendor/bootstrap.min",
         // utils
         "tools": "tools",
-        "console": "vendor/console"
+        "console": "vendor/console",
+        "toc": "vendor/toc.min"
 
     },
     // dependencies and exports
@@ -17,16 +18,25 @@ require.config({
         "bootstrap": ["jquery"],
         "throbber": ["jquery"],
         "console": ["jquery"],
-        "tools": ["jquery"]
+        "tools": ["jquery"],
+        "toc": ["jquery"]
     }
 });
 
 /////////////////////////////////////////////////////////////////////
 // BOOTSRAP !!!!
 /////////////////////////////////////////////////////////////////////
-require(["jquery", "bootstrap", "console", "tools"], function($) {
+require(["jquery", "bootstrap", "console", "tools","toc"], function($) {
     $(function() {
 
-        c("ok");
+        if($("#toc").length) {
+            $("#toc").toc({
+                "selectors": "h1,h2,h3",
+                "container": "#guidelines",
+                "prefix": "toc",
+                "scrollToOffset": 60
+            });
+        }
+        
     });
 });
