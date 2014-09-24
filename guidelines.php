@@ -3,12 +3,12 @@
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
-    <h1>thirdPartyServices</h1>
-    <p>(Non :)) exhaustive (more or less) popular services guidelines, tips and tests.</p>
+    <h1>Guidelines and tips</h1>
+    <p>(Non :)) exhaustive (more or less) popular services guidelines and tips.</p>
 </div>
 
 <!-- /////////////////////////////////////////////////////////////// -->
-<?php echo mdFileToHTML(README_FILE, true)?>
+<?php echo mdFileToHTML(GUIDELINES_FILE, false)?>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <?php include "includes/footer.php" ?>
