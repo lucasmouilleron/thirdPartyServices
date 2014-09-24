@@ -27,13 +27,13 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php">thirdPartyServices</a>
+                <a class="navbar-brand" href="index">thirdPartyServices</a>
               </div>
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                  <li class="<?php if(isPage("guidelines")) echo "active"?>"><a href="guidelines.php">Guidelines and tips</a></li>
-                  <li class="<?php if(isPage("instagram")) echo "active"?>"><a href="instagram.php">Instagram</a></li>
-                  <li class="<?php if(isPage("youtube")) echo "active"?>"><a href="youtube.php">Youtube</a></li>
+                  <li class="<?php if(isPage("guidelines")) echo "active"?>"><a href="guidelines">Guidelines and tips</a></li>
+                  <li class="<?php if(isPage("instagram")) echo "active"?>"><a href="instagram">Instagram</a></li>
+                  <li class="<?php if(isPage("youtube")) echo "active"?>"><a href="youtube">Youtube</a></li>
                 </ul>
               </div>
             </div>
