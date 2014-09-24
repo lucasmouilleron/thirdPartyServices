@@ -1,3 +1,3 @@
-(Non :)) exhaustive (more or less) popular services guidelines, tips and tests.
+(Non :)) exhaustive guidelines, tips and tests for (more or less) popular third party services.
 
 Includes : Facebook, Twitter, Instagram, Youtube, and more.

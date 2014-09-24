@@ -4,7 +4,7 @@
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
     <h1>thirdPartyServices</h1>
-    <p>(Non :)) exhaustive (more or less) popular services guidelines, tips and tests.</p>
+    <p>(Non :)) exhaustive guidelines, tips and tests for (more or less) popular third party services.</p>
 </div>
 
 <!-- /////////////////////////////////////////////////////////////// -->

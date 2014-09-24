@@ -4,7 +4,7 @@
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
     <h1>Guidelines and tips</h1>
-    <p>(Non :)) exhaustive (more or less) popular services guidelines and tips.</p>
+    <p>(Non :)) exhaustive guidelines and tips for (more or less) popular third party services.</p>
 </div>
 
 <!-- /////////////////////////////////////////////////////////////// -->

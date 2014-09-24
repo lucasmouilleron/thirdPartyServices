@@ -3,7 +3,8 @@ thirdPartyServices
 
 Motivations
 -----------
-Popular (or less popular) APIs guidelines, tips and tests.
+Guidelines, tips and tests for (more or less) popular third parties services.
+The goal is to help integrate these services in digital campaigns or services.
 
 Guidelines and tips
 -------------------
