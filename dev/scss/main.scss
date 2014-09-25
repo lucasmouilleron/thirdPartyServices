@@ -43,3 +43,18 @@ em {
     margin-left:30px;
     font-size: 0.9em;
 }
+
+.affix-top,.affix{
+    position: static;
+}
+
+@media (min-width: 600px) {
+    .affix-top {
+        position: static;    
+    }
+
+    .affix {
+        position: fixed;
+        top:60px;
+    }
+}

@@ -30,6 +30,19 @@ require(["jquery", "bootstrap", "console", "tools","toc"], function($) {
     $(function() {
 
         if($("#toc").length) {
+
+            $("#toc").affix({
+                offset: {
+                    top: $("#toc").offset().top-$(".navbar").height()
+                }
+            });
+/*
+            //var navHeight = $('.navbar').outerHeight(true) + 10;
+
+            $(document.body).scrollspy({
+                target: "#leftCol",
+                offset: 0
+            });*/
             $("#toc").toc({
                 "selectors": "h1,h2,h3",
                 "container": "#guidelines",

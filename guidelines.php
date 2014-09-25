@@ -8,12 +8,17 @@
     <p><small>Last modification : <?php echo lastModification()?></small></p>
 </div>
 
-<h1>Table of contents</h1>
-<div id="toc"></div>
-
 <!-- /////////////////////////////////////////////////////////////// -->
-<div id="guidelines">
-    <?php echo mdFileToHTML(GUIDELINES_FILE, false)?>
+<div class="row">
+    <div class="col-md-4">
+        <h1>Table of contents</h1>
+        <div id="toc"></div>
+    </div>
+    <div class="col-md-8">
+        <div id="guidelines">
+            <?php echo mdFileToHTML(GUIDELINES_FILE, false)?>
+        </div>
+    </div>
 </div>
 
 <!-- /////////////////////////////////////////////////////////////// -->
