@@ -32,6 +32,7 @@
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                   <li class="<?php if(isPage("guidelines")) echo "active"?>"><a href="guidelines">Guidelines and tips</a></li>
+                  <li class="<?php if(isPage("facebook")) echo "active"?>"><a href="facebook">Facebook</a></li>
                   <li class="<?php if(isPage("instagram")) echo "active"?>"><a href="instagram">Instagram</a></li>
                   <li class="<?php if(isPage("youtube")) echo "active"?>"><a href="youtube">Youtube</a></li>
                 </ul>

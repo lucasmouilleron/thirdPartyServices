@@ -21,17 +21,9 @@ function isPage($pageName) {
     return basename($_SERVER["REQUEST_URI"], ".php") == $pageName;
 }
 
-function buildTOC($content) {
-
-    $pattern = "/<h[2-".$depth."]*[^>]*>.*?<\/h[2-".$depth."]>/";
-    $whocares = preg_match_all($pattern, $content, $winners);
-
-    $heads = implode("\n",$winners[0]);
-    $heads = str_replace('<a name="','<a href="#',$heads);
-    $heads = str_replace('</a>','',$heads);
-    $heads = preg_replace('/<h([1-'.$depth.'])>/','<li class="toc$1">',$heads);
-    $heads = preg_replace('/<\/h[1-'.$depth.']>/','</a></li>',$heads);
-    return $heads;
+///////////////////////////////////////////////////////////////////////////////
+function lastModification() {
+    return date("d/m/Y",getlastmod());
 }
 
 

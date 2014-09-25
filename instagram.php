@@ -5,6 +5,7 @@
 <div class="jumbotron">
     <h1>Instagram</h1>
     <p>todo ...</p>
+    <p><small>Last modification : <?php echo lastModification()?></small></p>
 </div>
 
 <p>todo</p>

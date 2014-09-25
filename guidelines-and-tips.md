@@ -5,9 +5,35 @@ Sharing to Facebook
 -------------------
 - todo
 
+Like
+----
+- It is not possible to use Likes as counting 
+
 Faceook applications
 --------------------
 - todo
+
+Facebook connect
+----------------
+- Facebook does not store any 3rd party (our) informations, they have to be stored on the website / webapp servers
+- Loging in on a website with Facebook connect means the user logs in on Facebook and the website tries to find an account with the Facebook user ID. If so, the user becomes connected, if not, initiating registering process
+- Registering on a website with Facebook connect means the user logs in on Facebook and creating an account on the website servers with user's Facebook infos
+
+Canvas App VS Website app
+-------------------------
+- Canvas app provide integrated experience within Facebook plateform
+- Canvas app can use all the Graph API
+- Website app runs within a website and mainly offers social plugins, publishing and Facebook connect
+- Some Graph API elements can not or should not be access from a website App : friends list, Game API (notifications, requests)
+- This can be dodged by declaring app as a Canvas app and Website app and using it on website, though not allowed by [Facebook policies](https://developers.facebook.com/policy))
+
+Graph API
+---------
+- It is possible to invite friends to a Canvas App (Canvas app only)
+- It is possible to send notifications to users (Canvas app only)
+
+Mobile
+-----
 
 Twitter
 =======
@@ -19,6 +45,9 @@ Sharing to Twitter
 Hashtags
 --------
 - todo
+
+Twitter connect
+---------------
 
 Instagram
 =========
@@ -49,3 +78,12 @@ Partner
 -------
 - To become a partner, `enable monetization` of videos on the channel ([officiall documentation](https://support.google.com/youtube/answer/72857?hl=en))
 - Access [Youtube analytics](https://www.youtube.com/analytics)
+
+Pinterest
+=========
+
+Google +
+========
+
+Linkedin
+========
