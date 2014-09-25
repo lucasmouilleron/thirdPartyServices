@@ -3,8 +3,7 @@
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
-    <h1>Instagram</h1>
-    <p>todo ...</p>
+    <h1>Instagram tests</h1>
     <p><small>Last modification : <?php echo lastModification()?></small></p>
 </div>
 

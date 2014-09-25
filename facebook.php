@@ -3,7 +3,7 @@
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
-    <h1>Facebook</h1>
+    <h1>Facebook tests</h1>
     <p><small>Last modification : <?php echo lastModification()?></small></p>
 </div>
 

@@ -1,13 +1,18 @@
 Facebook
 ========
 
+Facebook policies
+-----------------
+- They move, a lot
+- [Facebook policies](https://developers.facebook.com/policy)
+
 Sharing to Facebook
 -------------------
 - todo
 
 Like
 ----
-- It is not possible to use Likes as counting 
+- It is __not__ possible to use Likes as a __game score mechanism__
 
 Faceook applications
 --------------------
@@ -15,22 +20,24 @@ Faceook applications
 
 Facebook connect
 ----------------
-- Facebook does not store any 3rd party (our) informations, they have to be stored on the website / webapp servers
-- Loging in on a website with Facebook connect means the user logs in on Facebook and the website tries to find an account with the Facebook user ID. If so, the user becomes connected, if not, initiating registering process
-- Registering on a website with Facebook connect means the user logs in on Facebook and creating an account on the website servers with user's Facebook infos
+- Facebook does __not store any 3rd party (our) informations__, they have to be stored on the website / webapp servers
+- __Loging in__ on a website with Facebook connect means the user logs in on Facebook and the website tries to __find an account with the Facebook user ID__ in its database. If so, the user becomes connected, if not, initiating registering process
+- __Registering on__ a website with Facebook connect means the user logs in on Facebook and creating an account on the website servers with user's Facebook infos
 
 Canvas App VS Website app
 -------------------------
-- Canvas app provide integrated experience within Facebook plateform
-- Canvas app can use all the Graph API
-- Website app runs within a website and mainly offers social plugins, publishing and Facebook connect
-- Some Graph API elements can not or should not be access from a website App : friends list, Game API (notifications, requests)
-- This can be dodged by declaring app as a Canvas app and Website app and using it on website, though not allowed by [Facebook policies](https://developers.facebook.com/policy))
+- Canvas app provide __integrated experience__ within Facebook plateform
+- Canvas app can use __all__ the Graph API
+- Website app runs within a website and __only__ offers social plugins, publishing and Facebook connect
+- Therefore, some Graph API elements __can not or should__ not be access from a website App : friends list, Game API (notifications, requests)
+- This can be dodged by declaring app as a Canvas app and Website app and using it on website, though not allowed by Facebook policies
 
 Graph API
 ---------
-- It is possible to invite friends to a Canvas App (Canvas app only)
-- It is possible to send notifications to users (Canvas app only)
+- It is possible to __invite friends__ to an app (Canvas app only)
+- It is possible to __send notifications__ to users (Canvas app only)
+- It is __not__ possible to __get images of a post__ if it contains multiple images (just the first one is available)
+- It is possible to get __all images uploaded__ by a user (`user-id/photos/uploaded`)
 
 Mobile
 -----
@@ -61,12 +68,12 @@ Youtube
 
 Channels management
 -------------------
-- `Edit channel navigation` and switch to `Browse` to allow homepage content cusomization (blocks of content [last upload, playlist, etc.])
+- `Edit channel navigation` and switch to `Browse` to allow __homepage content cusomization__ (blocks of content [last upload, playlist, etc.])
 - It is possible to edit the channel header and add links displayed over the header
-- It is possible to add a _channel trailer_ to welcome unsuscribed users
+- It is possible to add a __channel trailer__ to welcome unsuscribed users
 - It is possible to associate a website to a channel. Youtube says it helps SEO
-- It is possible to add _links_ to videos to videos, playlist, suscribre page and an __associated website__. Associated websites are declared within Youtube and Webmaster tools ([official documentation](https://support.google.com/youtube/answer/2887282?hl=en))
-- It is _not_ possible to customize the channel background
+- It is possible to add __links__ to videos to videos, playlist, suscribre page and an __associated website__. Associated websites are declared within Youtube and Webmaster tools ([official documentation](https://support.google.com/youtube/answer/2887282?hl=en))
+- It is __not__ possible to __customize the channel background__
 
 Events
 ------
