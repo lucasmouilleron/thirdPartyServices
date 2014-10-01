@@ -1,4 +1,5 @@
-<?php require_once "facebook-commons.php";?>
+<?php require_once __DIR__."/facebook-commons.php";?>
+
 <script>
     window.fbAsyncInit = function() {
         FB.init({

@@ -3,14 +3,13 @@
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
-    <h1>Facebook tests</h1>
+    <h1>Twitter tests</h1>
     <p><small>Last modification : <?php echo lastModification()?></small></p>
 </div>
 
 <ul>
-    <li><a href="tests/facebook-client-connect-php" target="_blank">Client side connect (PHP)</a></li>
-    <li><a href="tests/facebook-client-invite" target="_blank">Client side invite (JS)</a></li>
-    <li><a href="tests/facebook-server-notifications" target="_blank">Server side notification send (PHP)</a></li>
+    <li><a href="tests/twitter-server-pulling" target="_blank">Server side pulling as app (PHP)</a></li>
+    <li><a href="tests/twitter-server-streaming" target="_blank">Server side streaming as app (PHP)</a></li>
 </ul>
 
 <!-- /////////////////////////////////////////////////////////////// -->

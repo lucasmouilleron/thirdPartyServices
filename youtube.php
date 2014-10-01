@@ -7,7 +7,10 @@
     <p><small>Last modification : <?php echo lastModification()?></small></p>
 </div>
 
-<p>todo</p>
+<ul>
+    <li><a href="tests/youtube-player-iframe" target="_blank">Player iFrame</a></li>
+    <li><a href="tests/youtube-player-js" target="_blank">Player JS (requireJS + videoJS)</a></li>
+</ul>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <?php include "includes/footer.php" ?>

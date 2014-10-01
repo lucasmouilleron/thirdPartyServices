@@ -1,7 +1,7 @@
 <?php
 
 /////////////////////////////////////////////////////////////
-require_once "facebook-commons.php";
+require_once __DIR__."/facebook-commons.php";
 use Facebook\FacebookRequest;
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;

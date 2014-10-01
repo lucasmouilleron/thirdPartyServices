@@ -1,5 +1,6 @@
 <!-- /////////////////////////////////////////////////////////////// -->
 <?php include "includes/header.php" ?>
+<?php include "tests/Instagram-commons.php" ?>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
@@ -7,7 +8,10 @@
     <p><small>Last modification : <?php echo lastModification()?></small></p>
 </div>
 
-<p>todo</p>
+<ul>
+    <li><a href="tests/instagram-server-pulling" target="_blank">Server side pulling as app (PHP)</a></li>
+    <li><a href="tests/instagram-server-user-pulling" target="_blank">Server side pulling as user (PHP)</a></li>
+</ul>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <?php include "includes/footer.php" ?>

@@ -12,6 +12,7 @@
 
 /*///////////////////////////////////////////////////////////////////////////*/
 @import "vendor/bootstrap.min";
+@import "vendor/video-js";
 
 /*///////////////////////////////////////////////////////////////////////////*/
 /* CUSTOM STYLES */
@@ -60,5 +61,17 @@ em {
     .affix {
         position: fixed;
         top:60px;
+    }
+}
+
+#youtube-player-js {
+
+    #video {
+        display:none;
+        margin:30px auto;
+    }
+
+    .vjs-quality-button {
+        display:none;
     }
 }

@@ -1,4 +1,4 @@
-<?php require_once "libs/tools.php" ?>
+<?php require_once __DIR__."/../libs/tools.php" ?>
 <!DOCTYPE html>
 <head>
 
@@ -33,6 +33,7 @@
                 <ul class="nav navbar-nav">
                   <li class="<?php if(isPage("guidelines")) echo "active"?>"><a href="guidelines">Guidelines and tips</a></li>
                   <li class="<?php if(isPage("facebook")) echo "active"?>"><a href="facebook">Facebook</a></li>
+                  <li class="<?php if(isPage("twitter")) echo "active"?>"><a href="twitter">Twitter</a></li>
                   <li class="<?php if(isPage("instagram")) echo "active"?>"><a href="instagram">Instagram</a></li>
                   <li class="<?php if(isPage("youtube")) echo "active"?>"><a href="youtube">Youtube</a></li>
                 </ul>
