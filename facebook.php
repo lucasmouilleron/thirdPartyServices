@@ -8,8 +8,8 @@
 </div>
 
 <ul>
-    <li><a href="tests/facebook-client-connect-php" target="_blank">Client side connect (PHP)</a></li>
-    <li><a href="tests/facebook-client-invite" target="_blank">Client side invite (JS)</a></li>
+    <li><a href="tests/facebook-client-connect" target="_blank">Client side connect (PHP, JS: requireJS)</a></li>
+    <li><a href="tests/facebook-client-invite" target="_blank">Client side invite (JS: requireJS)</a></li>
     <li><a href="tests/facebook-server-notifications" target="_blank">Server side notification send (PHP)</a></li>
 </ul>
 

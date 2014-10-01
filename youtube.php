@@ -8,8 +8,8 @@
 </div>
 
 <ul>
-    <li><a href="tests/youtube-player-iframe" target="_blank">Player iFrame</a></li>
-    <li><a href="tests/youtube-player-js" target="_blank">Player JS (requireJS + videoJS)</a></li>
+    <li><a href="tests/youtube-player-iframe" target="_blank">Player iFrame (JS)</a></li>
+    <li><a href="tests/youtube-player-js" target="_blank">Player custom (JS : requireJS + videoJS)</a></li>
 </ul>
 
 <!-- /////////////////////////////////////////////////////////////// -->
