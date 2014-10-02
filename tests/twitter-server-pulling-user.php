@@ -2,6 +2,8 @@
 <?php require_once __DIR__."/twitter-commons.php"; ?>
 
 <!--/////////////////////////////////////////////////////////////-->
+<h1>Server side pulling as user</h1>
+
 <?php
 $cb = \Codebird\Codebird::getInstance();
 $cb->setToken(ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
@@ -13,7 +15,6 @@ if(isset($_GET["maxID"])) {
 $statuses = (array) $cb->statuses_homeTimeline("?max_id=".$maxID);
 ?>
 
-<h1>User token server side pulling</h1>
 <ul>
   <?php foreach ($statuses as $status) :?>
     <?php if(isset($status->text)):?>

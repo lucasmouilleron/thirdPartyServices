@@ -13,7 +13,8 @@ paths: {
 "toc": "vendor/toc.min",
 "video" : "vendor/video",
 "videoYoutube" : "vendor/video-youtube",
-"facebook": "//connect.facebook.net/en_US/all"
+"facebook": "//connect.facebook.net/en_US/all",
+"cookie":"vendor/jquery.cookie"
 },
 // dependencies and exports
 shim: {
@@ -23,6 +24,7 @@ shim: {
     "tools": ["jquery"],
     "toc": ["jquery"],
     "videoYoutube": ["video"],
+    "cookie": ["jquery"],
     "facebook" : {exports: "FB"}
 }
 });
@@ -30,7 +32,7 @@ shim: {
 /////////////////////////////////////////////////////////////////////
 // BOOTSRAP !!!!
 /////////////////////////////////////////////////////////////////////
-require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","toc"], function($,videoYoutube) {
+require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","toc","cookie"], function($,videoYoutube) {
     $(function() {
 
         if($("#toc").length) {
@@ -71,21 +73,23 @@ require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","
             FB.init({
                 appId : $("#facebook-connect-js").data("app-id")
             });
+            
+            FB.getLoginStatus(function(response) {
+                $("#me").html("loging with cookie token");
+                if (response.status === 'connected') {
+                    //$("#fb-login").hide();
+                    showMe();
+                }
+            });
             $("#fb-login").click(function() {
-                FB.getLoginStatus(function(response) {
-                    if (response.status === 'connected') {
+                FB.login(function(response) {
+                    if (response.status === "connected") {
+                        console.log(response.authResponse.accessToken);
                         showMe();
-                    }
-                    else {
-                        FB.login(function(response) {
-                            if (response.status === "connected") {
-                                showMe();
-                            } else if (response.status === 'not_authorized') {
-                                alert("not logged in to app");
-                            } else {
-                                alert("not logged in to fb");
-                            }
-                        });
+                    } else if (response.status === 'not_authorized') {
+                        alert("not logged in to app");
+                    } else {
+                        alert("not logged in to fb");
                     }
                 });
             });

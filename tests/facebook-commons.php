@@ -15,8 +15,10 @@ session_start();
 FacebookSession::setDefaultApplication(APPLICATION_ID, APPLICATION_SECRET);
 FacebookSession::enableAppSecretProof(false);
 
+
 /////////////////////////////////////////////////////////////
-function validateUserAccessToken() {
+function validateServerSideLongLivedUserAccessToken() {
+
   if(!file_exists("fb-long-lived-token")) {
     die("<a href='facebook-generate-long-token' target='_blank'>generate long lived access token first</a>");
   }
@@ -28,6 +30,39 @@ function validateUserAccessToken() {
   catch (Exception $e) {
     die("Can't validate sessions, <a href='facebook-generate-long-token' target='_blank'>generate long lived access token first</a>");
   }
+}
+
+/////////////////////////////////////////////////////////////
+function destroyUserAccessTokenSession() {
+  unset($_SESSION["fb_session_token"]);
+  return null;
+}
+
+/////////////////////////////////////////////////////////////
+function registerSessionFromUserAccessToken($token) {
+  try {
+    $_SESSION["fb_session_token"] = $token;
+    return getSessionFromUserAccessToken();
+  } catch (Exception $e) {
+    return null;
+  }
+}
+
+/////////////////////////////////////////////////////////////
+function getSessionFromUserAccessToken() {
+
+  if(isset($_SESSION["fb_session_token"])) {
+    try {
+      $session  = new FacebookSession($_SESSION["fb_session_token"]);
+      $session->validate();
+      return $session;
+    }
+    catch (Exception $e) {
+      destroyUserAccessTokenSession();
+      die("Can't validate session token");
+    }
+  }
+  return null;
 }
 
 

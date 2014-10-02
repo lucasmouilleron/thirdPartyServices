@@ -1,9 +1,10 @@
+<!-- /////////////////////////////////////////////////////////////-->
 <?php
-
-/////////////////////////////////////////////////////////////
 require_once __DIR__."/instagram-commons.php";
 ?>
 
+<!-- /////////////////////////////////////////////////////////////-->
+<h1>Server side pulling as user</h1>
 <?php if(isset($_SESSION["instagram_token"])):?>
     <ul>
         <?php foreach ($instagram->getUserMedia()->data as $media) :?>

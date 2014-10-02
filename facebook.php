@@ -8,7 +8,9 @@
 </div>
 
 <ul>
-    <li><a href="tests/facebook-client-connect" target="_blank">Client side connect (PHP, JS: requireJS)</a></li>
+    <li><a href="tests/facebook-connect-client-js" target="_blank">Connect client side (JS: requireJS)</a></li>
+    <li><a href="tests/facebook-connect-php" target="_blank">Connect and server side validation (PHP)</a></li>
+    <li><a href="tests/facebook-connect-token" target="_blank">Connect with token and valiation (PHP)</a></li>
     <li><a href="tests/facebook-client-invite" target="_blank">Client side invite (JS: requireJS)</a></li>
     <li><a href="tests/facebook-server-notifications" target="_blank">Server side notification send (PHP)</a></li>
     <li><a href="tests/facebook-server-pulling-app" target="_blank">Server side pulling as an app (PHP)</a></li>

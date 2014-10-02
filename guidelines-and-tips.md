@@ -20,8 +20,8 @@ Like
 Facebook connect
 ----------------
 - Facebook does __not store any 3rd party (our) informations__, they have to be stored on the website / web app servers
-- __Loging in__ on a website with Facebook connect means the user logs in on Facebook and the website tries to __find an account with the Facebook user ID__ in its database. If so, the user becomes connected, if not, initiating registering process
-- __Registering on__ a website with Facebook connect means the user logs in on Facebook and creating an account on the website servers with user's Facebook infos
+- __Loging in__ on a website with Facebook connect means the user logs in __via Facebook__. The website __validates__ the `user token` with Facebook. Then it retrieves the user `email` (_permission needed_). If an account already exists, the user is loged in. If not, the user is being registered.
+- The token may _be kept (session for example)_ so it is not ask to Facebook for every connection.
 
 Facebook application and platforms
 ----------------------------------
@@ -73,6 +73,9 @@ Twitter API
 - It is __not__ possible to __get all images of a tweets__ if it contains multiple images (just the first one is available)
 - `User access token` do __not__ expire (they can be revoked though)
 
+Twitter widgets
+---------------
+
 Instagram
 =========
 
@@ -109,6 +112,14 @@ Partner
 
 Pinterest
 =========
+
+Pinterest API
+-------------
+- The pinterest API is __limited to the domain__ (my-company.com) of the app owner
+- It is __not possible to search tags__, words outside the app domain
+
+Pinterest widgets
+-----------------
 
 Google +
 ========

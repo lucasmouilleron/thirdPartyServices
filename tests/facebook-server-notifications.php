@@ -1,12 +1,16 @@
+<!--/////////////////////////////////////////////////////////////-->
 <?php
 
-/////////////////////////////////////////////////////////////
 require_once __DIR__."/facebook-commons.php";
 use Facebook\FacebookRequest;
 use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
+?>
 
-/////////////////////////////////////////////////////////////
+<!--/////////////////////////////////////////////////////////////-->
+<h1>Server side notification</h1>
+<?php 
+
 $session = new FacebookSession(APPLICATION_ID."|".APPLICATION_SECRET);
 $request = new FacebookRequest(
   $session,
@@ -29,6 +33,5 @@ catch (FacebookRequestException $ex) {
 catch (\Exception $ex) {
   echo $ex->getMessage();
 }
-
 
 ?>

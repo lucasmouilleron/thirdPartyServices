@@ -2,9 +2,10 @@
 <?php require_once __DIR__."/twitter-commons.php"; ?>
 
 <!--/////////////////////////////////////////////////////////////-->
+<h1>App token server side pulling (<?php echo HASHTAG_TEST?>)</h1>
+
+
 <?php
-
-
 $cb = \Codebird\Codebird::getInstance();
 $maxID = 0;
 if(isset($_GET["maxID"])) {
@@ -12,8 +13,6 @@ if(isset($_GET["maxID"])) {
 }
 $reply = $cb->search_tweets("q=".HASHTAG_TEST."&max_id=".$maxID, true);  
 ?>
-
-<h1>App token server side pulling (<?php echo HASHTAG_TEST?>)</h1>
 <ul>
   <?php foreach ($reply->statuses as $status) :?>
     <?php $maxID = $status->id;?>

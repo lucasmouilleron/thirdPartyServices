@@ -7,7 +7,8 @@ use Facebook\FacebookRequest;
 
 <!--/////////////////////////////////////////////////////////////-->
 <h1>Access token server side pulling</h1>
-<?php validateUserAccessToken()?>
+
+<?php validateServerSideLongLivedUserAccessToken()?>
 <?php 
 
 $session = new FacebookSession(USER_ACCESS_TOKEN);

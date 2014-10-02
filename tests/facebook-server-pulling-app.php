@@ -6,6 +6,8 @@ use Facebook\FacebookRequest;
 ?>
 
 <!--/////////////////////////////////////////////////////////////-->
+<h1>App token server side pulling</h1>
+
 <?php
 
 $session = new FacebookSession(APPLICATION_ID."|".APPLICATION_SECRET);
@@ -29,7 +31,6 @@ catch (\Exception $ex) {
 
 ?>
 
-<h1>App token server side pulling</h1>
 <?php foreach($photos as $photo):?>
   <img src="<?php echo $photo->getProperty("picture")?>" height="50"/>
 <?php endforeach;?>
