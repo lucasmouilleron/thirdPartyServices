@@ -35,11 +35,15 @@ Facebook application and platforms
 
 Graph API
 ---------
+- `User access token` (+ permissions)_ __are needed for most of operations__ such as read posts, friends or photos.
+- `User access token` __are not needed for some (serverside) app operations__ such as post on behalf or notifications. `App token` is enough.
+- `User access token` expires if they are not used within 2 hours. They are auto renewed when used.
+- `Long lived user access token` expires if they are not used within 60 days. They are auto renewed when used.
+- `Long lived user access token` can be generated server side from a standard `user access token`
 - It is possible to __invite friends__ to an app (Canvas App and Mobile App only)
-- It is possible to __send notifications__ to users (Canvas App and Mobile App only)
-- It is __not__ possible to __get images of a post__ if it contains multiple images (just the first one is available)
+- It is possible to __send notifications__ to app users (Canvas App and Mobile App only)
+- It is __not__ possible to __get all images of a post__ if it contains multiple images (just the first one is available)
 - It is possible to get __all images uploaded__ by a user (`user-id/photos/uploaded`)
-- OAuth Access token are __not needed for serverside app operations__ (post on behalf, notifications, etc.). App credentials are enough
 
 Mobile
 -----
@@ -66,6 +70,8 @@ Twitter API
 -----------
 - OAuth Access tokens __are not needed for serverside app REST operations__ (search tweets, get users timeline, get user infos) : [offical doc](https://dev.twitter.com/oauth/application-only)
 - App credentials __and__ OAuth Access tokens are needed for using the Stream API
+- It is __not__ possible to __get all images of a tweets__ if it contains multiple images (just the first one is available)
+- `User access token` do __not__ expire (they can be revoked though)
 
 Instagram
 =========

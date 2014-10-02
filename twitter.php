@@ -8,7 +8,8 @@
 </div>
 
 <ul>
-    <li><a href="tests/twitter-server-pulling" target="_blank">Server side pulling as app (PHP)</a></li>
+    <li><a href="tests/twitter-server-pulling-app" target="_blank">Server side pulling as app (PHP)</a></li>
+    <li><a href="tests/twitter-server-pulling-user" target="_blank">Server side pulling as user (PHP)</a></li>
     <li><a href="tests/twitter-server-streaming" target="_blank">Server side streaming as app (PHP)</a></li>
 </ul>
 

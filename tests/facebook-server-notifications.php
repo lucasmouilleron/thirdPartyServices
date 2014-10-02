@@ -7,10 +7,7 @@ use Facebook\FacebookSession;
 use Facebook\FacebookRedirectLoginHelper;
 
 /////////////////////////////////////////////////////////////
-FacebookSession::setDefaultApplication(APPLICATION_ID, APPLICATION_SECRET);
 $session = new FacebookSession(APPLICATION_ID."|".APPLICATION_SECRET);
-
-/////////////////////////////////////////////////////////////
 $request = new FacebookRequest(
   $session,
   "POST",
@@ -20,18 +17,6 @@ $request = new FacebookRequest(
     "template" => "This is a test message",
     )
   );
-
-/*$request = new FacebookRequest(
-  $session,
-  "POST",
-  "/".TEST_USER_ID."/feed",
-  array (
-
-    "message" => "This is a test message",
-    )
-  );*/
-
-
 
 try {
   $response = $request->execute();
