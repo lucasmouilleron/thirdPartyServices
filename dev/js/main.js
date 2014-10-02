@@ -23,7 +23,7 @@ shim: {
     "console": ["jquery"],
     "tools": ["jquery"],
     "toc": ["jquery"],
-    "videoYoutube": ["video"],
+    "videoYoutube": {"deps":["video"], exports: "videojs"},
     "cookie": ["jquery"],
     "facebook" : {exports: "FB"}
 }
@@ -32,7 +32,7 @@ shim: {
 /////////////////////////////////////////////////////////////////////
 // BOOTSRAP !!!!
 /////////////////////////////////////////////////////////////////////
-require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","toc","cookie"], function($,videoYoutube) {
+require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","toc","cookie"], function($,videoYoutube, fb) {
     $(function() {
 
         if($("#toc").length) {
@@ -50,7 +50,7 @@ require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","
         }
 
         if($("#youtube-player-js").length) {
-            videojs("video", { 
+            videoYoutube("video", { 
                 "techOrder": ["youtube"], 
                 "src": "http://www.youtube.com/watch?v="+$("#video").data("video-id"),
                 "quality": "720p",
@@ -66,15 +66,15 @@ require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","
 
         if($("#facebook-connect-js").length) {
             function showMe() {
-                FB.api("/me", function(response) {
+                fb.api("/me", function(response) {
                     $("#me").html(JSON.stringify(response));
                 });
             }
-            FB.init({
+            fb.init({
                 appId : $("#facebook-connect-js").data("app-id")
             });
             
-            FB.getLoginStatus(function(response) {
+            fb.getLoginStatus(function(response) {
                 $("#me").html("loging with cookie token");
                 if (response.status === 'connected') {
                     //$("#fb-login").hide();
@@ -82,7 +82,7 @@ require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","
                 }
             });
             $("#fb-login").click(function() {
-                FB.login(function(response) {
+                fb.login(function(response) {
                     if (response.status === "connected") {
                         console.log(response.authResponse.accessToken);
                         showMe();
@@ -96,12 +96,12 @@ require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","
         }
 
         if($("#facebook-invite-js").length) {
-            FB.init({
+            fb.init({
                 appId: $("#facebook-invite-js").data("app-id")
             });
-            FB.getLoginStatus(function(response) {
+            fb.getLoginStatus(function(response) {
                 if (response.status === "connected") {
-                    FB.ui({method: "apprequests",
+                    fb.ui({method: "apprequests",
                         message: "Invite test",
                         to: $("#facebook-invite-js").data("user-id")
                     }, function(response){
@@ -109,7 +109,7 @@ require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","
                     });
                 }
                 else {
-                    FB.login();
+                    fb.login();
                 }
             });
         }
