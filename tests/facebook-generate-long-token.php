@@ -9,7 +9,7 @@ use Facebook\FacebookSession;
 <h1>Generate long live access token from short lived token</h1>
 
 <p>Short lived token for the app <?php echo APPLICATION_ID?> can be retrieved from the <a href="https://developers.facebook.com/tools/explorer/<?php echo APPLICATION_ID?>" target="_blank">Graph API Explorer</a></p>
-<form action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
+<form action="<?php echo getCurrentURLWithoutParams()?>" method="post">
     <input name="token"/>
     <input type="submit" value="generate" name="submit"/>
 </form>

@@ -20,8 +20,8 @@ Like
 Facebook connect
 ----------------
 - Facebook does __not store any 3rd party (our) informations__, they have to be stored on the website / web app servers
-- __Loging in__ on a website with Facebook connect means the user logs in __via Facebook__. The website __validates__ the `user token` with Facebook. Then it retrieves the user `email` (_permission needed_). If an account already exists, the user is loged in. If not, the user is being registered.
-- The token may _be kept (session for example)_ so it is not ask to Facebook for every connection.
+- __Loging in__ on a website with Facebook connect means the user logs in __via Facebook__. The website __validates__ the `user token` with Facebook. Then it retrieves the user `email` (_permission needed_). If an account already exists, the user is loged in. If not, the user is being registered. In both cases, the authentication is persisted (jwt or session).
+- The token may _be kept (within session for example)_ so it is not ask to Facebook for every connection.
 
 Facebook application and platforms
 ----------------------------------
@@ -81,7 +81,13 @@ Instagram
 
 Hashtags
 --------
-- todo
+- It is possible to listen to hashtags
+- __Only public pictures__ are visible when listening
+
+Instragram API
+--------------
+- `User access token` should not expire, but ... they can (cf [Instagram doc](http://instagram.com/developer/authentication))
+- We assume they are auto renewed when used
 
 Youtube
 =======

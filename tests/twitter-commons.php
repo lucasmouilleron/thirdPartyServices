@@ -14,6 +14,7 @@ define("HASHTAG_TEST","#1dosedamour");
 require_once __DIR__ . "/../libs/Codebird/codebird.php";
 require_once __DIR__ . "/../libs/Phirehose/Phirehose.php";
 require_once __DIR__ . "/../libs/Phirehose/OauthPhirehose.php";
+require  __DIR__."/../libs/tools.php";
 session_start();
 
 /////////////////////////////////////////////////////////////

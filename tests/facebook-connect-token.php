@@ -9,7 +9,7 @@ use Facebook\FacebookRedirectLoginHelper;
 <!--/////////////////////////////////////////////////////////////-->
 <h1>Connect with token and server side validation</h1>
 
-<form action="<?php echo $_SERVER["PHP_SELF"]?>" method="post">
+<form action="<?php echo getCurrentURLWithoutParams()?>" method="post">
     <input name="token"/>
     <input type="submit" value="login from token" name="submit"/>
 </form>

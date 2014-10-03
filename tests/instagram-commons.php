@@ -3,6 +3,7 @@
 /////////////////////////////////////////////////////////////
 // https://github.com/cosenary/Instagram-PHP-API
 require_once __DIR__ . "/../libs/Instagram/instagram.class.php";
+require  __DIR__."/../libs/tools.php";
 session_start();
 
 /////////////////////////////////////////////////////////////

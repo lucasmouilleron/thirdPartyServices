@@ -8,6 +8,7 @@ define("APPLICATION_SECRET","b531e3337a72646da87a01bab08b0070");
 
 /////////////////////////////////////////////////////////////
 require  __DIR__."/../libs/Facebook/autoload.php";
+require  __DIR__."/../libs/tools.php";
 
 /////////////////////////////////////////////////////////////
 use Facebook\FacebookSession;
@@ -22,10 +23,11 @@ function validateServerSideLongLivedUserAccessToken() {
   if(!file_exists("fb-long-lived-token")) {
     die("<a href='facebook-generate-long-token' target='_blank'>generate long lived access token first</a>");
   }
-  define("USER_ACCESS_TOKEN",file_get_contents("fb-long-lived-token"));
   try {
-    $session = new FacebookSession(USER_ACCESS_TOKEN);
+    $token = file_get_contents("fb-long-lived-token");
+    $session = new FacebookSession($token);
     $session->validate();
+    return $token;
   } 
   catch (Exception $e) {
     die("Can't validate sessions, <a href='facebook-generate-long-token' target='_blank'>generate long lived access token first</a>");

@@ -17,6 +17,11 @@ function mdFileToHTML($file, $removeH1) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
+function getCurrentURLWithoutParams() {
+    return strtok($_SERVER["REQUEST_URI"],"?");
+}
+
+///////////////////////////////////////////////////////////////////////////////
 function isPage($pageName) {
     return basename($_SERVER["REQUEST_URI"], ".php") == $pageName;
 }

@@ -8,10 +8,10 @@ use Facebook\FacebookRequest;
 <!--/////////////////////////////////////////////////////////////-->
 <h1>Access token server side pulling</h1>
 
-<?php validateServerSideLongLivedUserAccessToken()?>
+<?php $token = validateServerSideLongLivedUserAccessToken()?>
 <?php 
 
-$session = new FacebookSession(USER_ACCESS_TOKEN);
+$session = new FacebookSession($token);
 $request = new FacebookRequest(
   $session,
   "GET",
@@ -35,6 +35,7 @@ catch (\Exception $ex) {
     <li>
       <?php echo $post->getProperty("message")?>
       <img src="<?php echo $post->getProperty("picture")?>" height="50"/>
+      <!--<?php var_dump($post)?>-->
     </li>
   <?php endforeach;?>
 </ul>

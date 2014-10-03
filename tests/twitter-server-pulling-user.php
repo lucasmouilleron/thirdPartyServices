@@ -11,8 +11,13 @@ $cb->setToken(ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
 $maxID = 0;
 if(isset($_GET["maxID"])) {
   $maxID =   $_GET["maxID"];
+  $statuses = (array) $cb->statuses_homeTimeline("max_id=".$maxID);
 }
-$statuses = (array) $cb->statuses_homeTimeline("?max_id=".$maxID);
+else {
+  $statuses = (array) $cb->statuses_homeTimeline();
+}
+
+//var_dump($statuses);
 ?>
 
 <ul>
