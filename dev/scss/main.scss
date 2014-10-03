@@ -23,8 +23,12 @@ html,body {
     height:100%;
 }
 
-.jumbotron {
+body > .container {
     margin-top:70px;
+}
+
+form {
+    margin:15px 0;
 }
 
 ul {
@@ -74,4 +78,8 @@ em {
     .vjs-quality-button {
         display:none;
     }
+}
+
+.alert, .well {
+    word-wrap: break-word;
 }

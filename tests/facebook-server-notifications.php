@@ -1,6 +1,6 @@
 <!--/////////////////////////////////////////////////////////////-->
 <?php
-
+require_once __DIR__."/../includes/header.php";
 require_once __DIR__."/facebook-commons.php";
 use Facebook\FacebookRequest;
 use Facebook\FacebookSession;
@@ -25,13 +25,13 @@ $request = new FacebookRequest(
 try {
   $response = $request->execute();
   $graphObject = $response->getGraphObject();
-  echo "sent !";
-} 
-catch (FacebookRequestException $ex) {
-  echo $ex->getMessage();
+  echo "<div class='alert alert-success'>sent !</div>";
 } 
 catch (\Exception $ex) {
-  echo $ex->getMessage();
+  echo "<div class='alert alert-success'>Error  : ".$ex->getMessage()."</div>";
 }
 
 ?>
+
+<!-- /////////////////////////////////////////////////////////////// -->
+<?php require_once __DIR__."/../includes/footer.php" ?>

@@ -1,5 +1,6 @@
 <!--/////////////////////////////////////////////////////////////-->
 <?php
+require_once __DIR__."/../includes/header.php";
 require_once __DIR__."/facebook-commons.php";
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
@@ -31,6 +32,18 @@ catch (\Exception $ex) {
 
 ?>
 
+<?php $i=1;?>
 <?php foreach($photos as $photo):?>
-  <img src="<?php echo $photo->getProperty("picture")?>" height="50"/>
+  <div>
+    <h3>Item <?php echo $i?></h3>
+    <p><?php echo $photo->getProperty("link")?></p>
+    <p>
+      <img src="<?php echo $photo->getProperty("picture")?>" height="50"/>
+    </p>
+    <pre><code class="json"><?php var_dump($photo)?></code></pre>
+  </div>
+  <?php $i++;?>
 <?php endforeach;?>
+
+<!-- /////////////////////////////////////////////////////////////// -->
+<?php require_once __DIR__."/../includes/footer.php" ?>

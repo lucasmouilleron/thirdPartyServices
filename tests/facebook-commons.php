@@ -7,8 +7,8 @@ define("APPLICATION_ID","140025316173237");
 define("APPLICATION_SECRET","b531e3337a72646da87a01bab08b0070");
 
 /////////////////////////////////////////////////////////////
-require  __DIR__."/../libs/Facebook/autoload.php";
-require  __DIR__."/../libs/tools.php";
+require_once  __DIR__."/../libs/Facebook/autoload.php";
+require_once  __DIR__."/../libs/tools.php";
 
 /////////////////////////////////////////////////////////////
 use Facebook\FacebookSession;
@@ -30,7 +30,8 @@ function validateServerSideLongLivedUserAccessToken() {
     return $token;
   } 
   catch (Exception $e) {
-    die("Can't validate sessions, <a href='facebook-generate-long-token' target='_blank'>generate long lived access token first</a>");
+    return null;
+    //("Can't validate sessions, <a href='facebook-generate-long-token' target='_blank'>generate long lived access token first</a>");
   }
 }
 
@@ -61,7 +62,7 @@ function getSessionFromUserAccessToken() {
     }
     catch (Exception $e) {
       destroyUserAccessTokenSession();
-      die("Can't validate session token");
+      return null;
     }
   }
   return null;

@@ -1,6 +1,6 @@
 <!-- /////////////////////////////////////////////////////////////// -->
-<?php include "includes/header.php" ?>
-<?php include "tests/Instagram-commons.php" ?>
+<?php require_once __DIR__."/includes/header.php" ?>
+<?php require_once __DIR__."/tests/instagram-commons.php" ?>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
@@ -14,4 +14,4 @@
 </ul>
 
 <!-- /////////////////////////////////////////////////////////////// -->
-<?php include "includes/footer.php" ?>
+<?php require_once "includes/footer.php" ?>

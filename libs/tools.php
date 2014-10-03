@@ -1,10 +1,11 @@
 <?php
 
 ///////////////////////////////////////////////////////////////////////////////
-require_once "Michelf/Markdown.inc.php";use \Michelf\Markdown;
+require_once "Michelf/Markdown.inc.php"; use \Michelf\Markdown;
 
 ///////////////////////////////////////////////////////////////////////////////
-define("GUIDELINES_FILE","guidelines-and-tips.md");
+define("BASE_URL",getBaseURL());
+define("GUIDELINES_FILE",__DIR__."/../guidelines-and-tips.md");
 define("README_FILE","README.md");
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -31,5 +32,12 @@ function lastModification() {
     return date("d/m/Y",getlastmod());
 }
 
+///////////////////////////////////////////////////////////////////////////////
+function getBaseURL()
+{
+    $base_dir  = preg_replace("/libs$/", "", __DIR__);
+    $doc_root  = preg_replace("!{$_SERVER['SCRIPT_NAME']}$!", '', $_SERVER['SCRIPT_FILENAME']);
+    return rtrim(preg_replace("!^{$doc_root}!", '', $base_dir), "/");
+}
 
 ?>

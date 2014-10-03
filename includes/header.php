@@ -8,8 +8,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width initial-scale=1.0">
-  <link rel="shortcut icon" href="assets/img/favicon.png">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="shortcut icon" href="<?php echo BASE_URL?>/assets/img/favicon.png">
+  <link rel="stylesheet" href="<?php echo BASE_URL?>/assets/css/main.css">
 
 </head>
 <body>
@@ -27,11 +27,11 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="<?php if(isPage("guidelines")) echo "active"?>"><a href="guidelines">Guidelines and tips</a></li>
-          <li class="<?php if(isPage("facebook")) echo "active"?>"><a href="facebook">Facebook</a></li>
-          <li class="<?php if(isPage("twitter")) echo "active"?>"><a href="twitter">Twitter</a></li>
-          <li class="<?php if(isPage("instagram")) echo "active"?>"><a href="instagram">Instagram</a></li>
-          <li class="<?php if(isPage("youtube")) echo "active"?>"><a href="youtube">Youtube</a></li>
+          <li class="<?php if(isPage("guidelines")) echo "active"?>"><a href="<?php echo BASE_URL?>/guidelines">Guidelines and tips</a></li>
+          <li class="<?php if(isPage("facebook")) echo "active"?>"><a href="<?php echo BASE_URL?>/facebook">Facebook</a></li>
+          <li class="<?php if(isPage("twitter")) echo "active"?>"><a href="<?php echo BASE_URL?>/twitter">Twitter</a></li>
+          <li class="<?php if(isPage("instagram")) echo "active"?>"><a href="<?php echo BASE_URL?>/instagram">Instagram</a></li>
+          <li class="<?php if(isPage("youtube")) echo "active"?>"><a href="<?php echo BASE_URL?>/youtube">Youtube</a></li>
         </ul>
       </div>
     </div>
