@@ -9,6 +9,9 @@ define("GUIDELINES_FILE",__DIR__."/../guidelines-and-tips.md");
 define("README_FILE","README.md");
 
 ///////////////////////////////////////////////////////////////////////////////
+date_default_timezone_set("Europe/Paris");
+
+///////////////////////////////////////////////////////////////////////////////
 function mdFileToHTML($file, $removeH1) {
     $html = Markdown::defaultTransform(file_get_contents($file));
     if($removeH1) {

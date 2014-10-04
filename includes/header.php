@@ -23,7 +23,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index">thirdPartyServices</a>
+        <a class="navbar-brand" href="<?php echo BASE_URL?>">thirdPartyServices</a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">

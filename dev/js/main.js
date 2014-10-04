@@ -67,7 +67,7 @@ require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","
         if($("#facebook-connect-js").length) {
             function showMe() {
                 fb.api("/me", function(response) {
-                    $("#me").html(JSON.stringify(response));
+                    $("#me").html("<pre>"+JSON.stringify(response)+"</pre>");
                 });
             }
             fb.init({
@@ -75,7 +75,7 @@ require(["jquery", "videoYoutube", "facebook", "bootstrap", "console", "tools","
             });
             
             fb.getLoginStatus(function(response) {
-                $("#me").html("loging with cookie token");
+                $("#me").html("login in with cookie token");
                 if (response.status === 'connected') {
                     //$("#fb-login").hide();
                     showMe();
