@@ -3,7 +3,7 @@ require_once __DIR__."/facebook-commons.php";
 require_once __DIR__."/../includes/header.php";
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
-use Facebook\FacebookRedirectLoginHelper;
+
 ?>
 
 <!--/////////////////////////////////////////////////////////////-->
@@ -21,17 +21,13 @@ $session = getSessionFromUserAccessToken();
 
 // if failed, try to get from URL if we come back from Facebook
 if(!isset($session)) {
-    $helper = new FacebookRedirectLoginHelper(curPageURL(false));
-    $session = $helper->getSessionFromRedirect();
-    if(isset($session)) {
-        $session = registerSessionFromUserAccessToken($session->getToken());
-    }
+    $session = registerSessionFromRedirectUrl(curPageURL(false));
 }
 
 ?>
 
 <?php if(!isset($session)):?>
-    <a href="<?php echo $helper->getLoginUrl();?>" class="btn btn-primary">Login with Facebook</a>
+    <a href="<?php echo getLoginURL(curPageURL(false));?>" class="btn btn-primary">Login with Facebook</a>
 <?php else :?>
     <div class="alert alert-success">
         <p><strong>You are connected</strong></p>

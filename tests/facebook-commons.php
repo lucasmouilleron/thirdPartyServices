@@ -12,6 +12,7 @@ require_once  __DIR__."/../libs/tools.php";
 
 /////////////////////////////////////////////////////////////
 use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
 session_start();
 FacebookSession::setDefaultApplication(APPLICATION_ID, APPLICATION_SECRET);
 FacebookSession::enableAppSecretProof(false);
@@ -39,6 +40,23 @@ function validateServerSideLongLivedUserAccessToken() {
 function destroyUserAccessTokenSession() {
   unset($_SESSION["fb_session_token"]);
   return null;
+}
+
+/////////////////////////////////////////////////////////////
+function registerSessionFromRedirectUrl($url) {
+  $helper = new FacebookRedirectLoginHelper($url);
+  $session = $helper->getSessionFromRedirect();
+  if(isset($session)) {
+    $session = registerSessionFromUserAccessToken($session->getToken());
+    return $session;
+  }
+  return null;
+}
+
+/////////////////////////////////////////////////////////////
+function getLoginURL($url) {
+  $helper = new FacebookRedirectLoginHelper($url);
+  return $helper->getLoginUrl();
 }
 
 /////////////////////////////////////////////////////////////
