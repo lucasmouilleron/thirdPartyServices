@@ -11,12 +11,15 @@ use Facebook\FacebookRedirectLoginHelper;
 
 <?php
 
-$session = getSessionFromUserAccessToken();
-
+// disconnect
 if(isset($_GET["disconnect"])) {
     $session = destroyUserAccessTokenSession();
 }
 
+// try to retrieve session from stored user access token
+$session = getSessionFromUserAccessToken();
+
+// if failed, try to get from URL if we come back from Facebook
 if(!isset($session)) {
     $helper = new FacebookRedirectLoginHelper(curPageURL(false));
     $session = $helper->getSessionFromRedirect();

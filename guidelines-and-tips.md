@@ -1,9 +1,42 @@
+Generalities
+============
+
+Third parties services evolve
+-----------------------------
+- Third party services, wheter it is an API or an iFrame, __evolve__. Sometimes a bit too much.
+- Never assume what is implemented _one day will work the next day_
+- Therefore, all informations below may not be releveant as of reading
+
+Usages
+------
+- Third party services have (evolving) __usage policies__. They may forbid some ways of using their service.
+- Most of the time, third party services _expose their functionnalities via API_. __Rate limits__ can apply to API calls.
+
+Connect or sign in with a third party service
+---------------------------------------------
+- Very convenient way to __register and authenticate users__
+- User _register or login_ on a platform _via their Facebook or Twitter credentials_ for example
+- Generally, it involves creating an app on the third party services and the usage of [OAuth](http://oauth.net)
+- The third party services generally does __not store any third party (our) informations__, they have to be stored on the website / web app servers
+- __Loging in__ on a web app with Facebook connect for example, means :
+    - The user logs in __via Facebook__. Facebook asks him if he want to connect tot the web app app.
+    - If so, Facebook sends us back the `user access token`.
+    - This token allows the web app to do some stuff on Facebook on the user behalf
+    - The web app __validates__ the `user access token` with Facebook
+    - The web app then retrieves the user `email` (_permission needed_)
+    - If an account already exists in the web app database, __the user is loged in__
+    - If not, the user __is being registered__
+    - The token may __be kept__ so it is not ask before every connection :
+        - Stored in a cookie for example
+        - When the user acess the web app, if the cookie is present and its token valid (not expired or revoked), the token is used
+        - If not, the user is asked to log in again via Facebook
+
 Facebook
 ========
 
 Facebook policies
 -----------------
-- They change, a lot
+- They change, a lot. 
 - [Facebook policies](https://developers.facebook.com/policy)
 
 Sharing to Facebook
@@ -15,38 +48,43 @@ Sharing to Facebook
 Like
 ----
 - It is __not__ possible to use Likes as a __game score mechanism__
-- It is possible to __like only URLs__
+- It is only possible to __like URLs__.
 
 Facebook connect
 ----------------
-- Facebook does __not store any 3rd party (our) informations__, they have to be stored on the website / web app servers
-- __Loging in__ on a website with Facebook connect means the user logs in __via Facebook__. The website __validates__ the `user token` with Facebook. Then it retrieves the user `email` (_permission needed_). If an account already exists, the user is loged in. If not, the user is being registered. In both cases, the authentication is persisted (jwt or session).
-- The token may _be kept (within session for example)_ so it is not ask to Facebook for every connection.
+- It possible to Facebook login with `pure client side means` with the JS SDK
+- Facebook provides SDKs for Facebook Connect for iOS, Android, JS, PHP and Unity
 
 Facebook application and platforms
 ----------------------------------
-- Canvas App provide __integrated experience__ within Facebook plateform
-- Mobile App is a native app running on a mobile device
-- Canvas App and Mobile App can use __all__ the Graph API
-- Website App runs within a website and can use __only__ social plugins, publishing and Facebook connect
-- Therefore, some Graph API elements __can not or should__ not be access from a website App : friends list, Game API (notifications, requests)
-- If one wants to build an __experience within a Website App and uses all the Graph API__, it is possible to declare and build an app as a __Canvas App and a Website App__. The forbidden interactions are then happehning in the Canvas App. The Website App sends the user to the Canvas App for social features (friends lists, notifications, invites, etc) and the Canvas App sends the user to the Website App to actually play the game or the experience.
-- Canvas App won't work on the mobile Facebook App
+- _Canvas Apps_ provide __integrated experience__ within Facebook plateform. It is an iFrame called within Facebook.
+- _Mobile Apps_ are native app running on a mobile device
+- _Canvas Apps and Mobile Apps_ can use __all__ the `Graph API`
+- _Website Apps_ run within a website and can use __only__ social plugins, publishing and Facebook connect
+- Therefore, some `Graph API` elements __can not or should__ not be access from a _Website App_ : friends list, Game API (notifications, requests)
+- If one wants to build an __experience within a Website App and uses all the__ `Graph API` :
+    - It is possible to declare and build an app as a __Canvas App and a Website App__.
+    - The forbidden interactions are then happehning in the _Canvas App_
+    - The _Website App_ sends the user to the _Canvas App_ for social features (friends lists, notifications, invites, etc) and the _Canvas App_ sends the user to the _Website App_ to actually play the game or the experience
+- _Canvas App_ won't work on the mobile Facebook App
 
 Graph API
 ---------
-- `User access token` (+ permissions)_ __are needed for most of operations__ such as read posts, friends or photos.
-- `User access token` __are not needed for some (serverside) app operations__ such as post on behalf or notifications. `App token` is enough.
-- `User access token` expires if they are not used within 2 hours. They are auto renewed when used.
-- `Long lived user access token` expires if they are not used within 60 days. They are auto renewed when used.
-- `Long lived user access token` can be generated server side from a standard `user access token`
-- It is possible to __invite friends__ to an app (Canvas App and Mobile App only)
-- It is possible to __send notifications__ to app users (Canvas App and Mobile App only)
+- `User access tokens` (+ permissions)_ __are needed for most of operations__ such as read posts, friends or photos.
+- `User access tokens` __are not needed for some (serverside) app operations__ such as post on behalf or notifications. `App credentials` are enough.
+- `User access tokens` expire if they are not used within 2 hours. They are auto renewed when used.
+- `Long lived user access tokens` expire if they are not used within 60 days. They are auto renewed when used.
+- `Long lived user access tokens` can be generated server side from a standard `user access token`
+- It is possible to __invite friends__ to an app (_Canvas App_ and _Mobile App_ only)
+- It is possible to __send notifications__ to app users (_Canvas App_ and _Mobile App_ only)
 - It is __not__ possible to __get all images of a post__ if it contains multiple images (just the first one is available)
 - It is possible to get __all images uploaded__ by a user (`user-id/photos/uploaded`)
 
 Mobile
 -----
+
+Rate limits
+-----------
 
 Twitter
 =======
@@ -63,18 +101,22 @@ Hashtags
 --------
 - todo
 
-Twitter connect
----------------
+Sign in with Twitter
+--------------------
+- 
 
 Twitter API
 -----------
-- OAuth Access tokens __are not needed for serverside app REST operations__ (search tweets, get users timeline, get user infos) : [offical doc](https://dev.twitter.com/oauth/application-only)
-- App credentials __and__ OAuth Access tokens are needed for using the Stream API
+- `User Access tokens` __are not needed for public serverside app REST operations__ (search tweets, pull tags) : [offical doc](https://dev.twitter.com/oauth/application-only)
 - It is __not__ possible to __get all images of a tweets__ if it contains multiple images (just the first one is available)
 - `User access token` do __not__ expire (they can be revoked though)
+- `App credentials` __and__ `user access tokens` are needed for using the `Stream API
 
 Twitter widgets
 ---------------
+
+Rate limits
+-----------
 
 Instagram
 =========
@@ -88,6 +130,9 @@ Instragram API
 --------------
 - `User access token` should not expire, but ... they can (cf [Instagram doc](http://instagram.com/developer/authentication))
 - We assume they are auto renewed when used
+
+Rate limits
+-----------
 
 Youtube
 =======

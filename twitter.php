@@ -8,6 +8,7 @@
 </div>
 
 <ul>
+    <li><a href="tests/twitter-connect-php" target="_blank">Connect and server side validation (PHP)</a></li>
     <li><a href="tests/twitter-server-pulling-app" target="_blank">Server side pulling as app (PHP)</a></li>
     <li><a href="tests/twitter-server-pulling-user" target="_blank">Server side pulling as user (PHP)</a></li>
     <li><a href="tests/twitter-server-streaming" target="_blank">Server side streaming as app (PHP)</a></li>

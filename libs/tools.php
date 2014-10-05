@@ -26,6 +26,11 @@ function getCurrentURLWithoutParams() {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
+function getCurrentFullURLWithoutPrams() {
+    return "http://".$_SERVER[HTTP_HOST].getCurrentURLWithoutParams();
+}
+
+///////////////////////////////////////////////////////////////////////////////
 function isPage($pageName) {
     return basename($_SERVER["REQUEST_URI"], ".php") == $pageName;
 }
