@@ -28,10 +28,10 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
           <li class="<?php if(isPage("guidelines")) echo "active"?>"><a href="<?php echo BASE_URL?>/guidelines">Guidelines and tips</a></li>
-          <li class="<?php if(isPage("facebook")) echo "active"?>"><a href="<?php echo BASE_URL?>/facebook">Facebook</a></li>
-          <li class="<?php if(isPage("twitter")) echo "active"?>"><a href="<?php echo BASE_URL?>/twitter">Twitter</a></li>
-          <li class="<?php if(isPage("instagram")) echo "active"?>"><a href="<?php echo BASE_URL?>/instagram">Instagram</a></li>
-          <li class="<?php if(isPage("youtube")) echo "active"?>"><a href="<?php echo BASE_URL?>/youtube">Youtube</a></li>
+          <li class="<?php if(isPage("tests/facebook")) echo "active"?>"><a href="<?php echo BASE_URL?>/tests/facebook">Facebook</a></li>
+          <li class="<?php if(isPage("tests/twitter")) echo "active"?>"><a href="<?php echo BASE_URL?>/tests/twitter">Twitter</a></li>
+          <li class="<?php if(isPage("tests/instagram")) echo "active"?>"><a href="<?php echo BASE_URL?>/tests/instagram">Instagram</a></li>
+          <li class="<?php if(isPage("tests/youtube")) echo "active"?>"><a href="<?php echo BASE_URL?>/tests/youtube">Youtube</a></li>
         </ul>
       </div>
     </div>

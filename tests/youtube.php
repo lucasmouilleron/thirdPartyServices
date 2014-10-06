@@ -1,5 +1,5 @@
 <!-- /////////////////////////////////////////////////////////////// -->
-<?php require_once __DIR__."/includes/header.php" ?>
+<?php require_once __DIR__."/../includes/header.php" ?>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
@@ -8,9 +8,9 @@
 </div>
 
 <ul>
-    <li><a href="tests/youtube-player-iframe" target="_blank">Player iFrame (JS)</a></li>
-    <li><a href="tests/youtube-player-js" target="_blank">Player custom (JS : requireJS + videoJS)</a></li>
+    <li><a href="youtube-player-iframe" target="_blank">Player iFrame (JS)</a></li>
+    <li><a href="youtube-player-js" target="_blank">Player custom (JS : requireJS + videoJS)</a></li>
 </ul>
 
 <!-- /////////////////////////////////////////////////////////////// -->
-<?php require_once __DIR__."/includes/footer.php" ?>
+<?php require_once __DIR__."/../includes/footer.php" ?>
