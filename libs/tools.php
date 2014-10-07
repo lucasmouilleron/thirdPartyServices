@@ -27,7 +27,7 @@ function getCurrentURLWithoutParams() {
 
 ///////////////////////////////////////////////////////////////////////////////
 function getCurrentFullURLWithoutPrams() {
-    return "http://".$_SERVER[HTTP_HOST].getCurrentURLWithoutParams();
+    return "http://".@$_SERVER[HTTP_HOST].getCurrentURLWithoutParams();
 }
 
 ///////////////////////////////////////////////////////////////////////////////

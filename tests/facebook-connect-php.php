@@ -11,23 +11,25 @@ use Facebook\FacebookRequest;
 
 <?php
 
+// try to retrieve session from sesssion stored user access token
+$session = getSessionFromUserAccessToken();
+
+// if failed, OAuth 2.0 exchange code for user access token
+if(!isset($session)) {
+    $session = registerSessionFromRedirectUrl(curPageURL(false));
+}
+
 // disconnect
 if(isset($_GET["disconnect"])) {
     $session = destroyUserAccessTokenSession();
 }
 
-// try to retrieve session from stored user access token
-$session = getSessionFromUserAccessToken();
-
-// if failed, try to get from URL if we come back from Facebook
-if(!isset($session)) {
-    $session = registerSessionFromRedirectUrl(curPageURL(false));
-}
-
 ?>
 
 <?php if(!isset($session)):?>
-    <a href="<?php echo getLoginURL(curPageURL(false));?>" class="btn btn-primary">Login with Facebook</a>
+    <p><a href="<?php echo getLoginURL(curPageURL(false));?>" class="btn btn-primary">Login with Facebook</a></p>
+    <p>OAuth 2.0 Redirect URI : <?php echo curPageURL(false)?></p>
+    <p>OAuth 2.0 official registered domain : localhost.com</p>
 <?php else :?>
     <div class="alert alert-success">
         <p><strong>You are connected</strong></p>
