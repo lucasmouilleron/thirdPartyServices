@@ -41,9 +41,10 @@ Facebook policies
 
 Sharing to Facebook
 -------------------
-- It is possible to __share only URLs__
-- The shared content __open graph tags__ are used to display image, title and description withing Facebook
+- It is possible to __share only URLs__ 
+- The shared content __open graph meta tags__ are used to display image, title and description withing Facebook
 - It is therefore needed to have __dedicated pages for dedicated shares__
+- [Facebook sharing doc](https://developers.facebook.com/docs/sharing/best-practices)
 
 Like
 ----
@@ -95,7 +96,11 @@ Twitter policies
 
 Sharing to Twitter
 ------------------
-- todo
+- Twitter sharing system is called `Twitter Cards`
+- It is possible to __share only URLs__ 
+- The shared content __twitter meta tags__ are used to display image, title and description within Twiter
+- [Twitter Cards doc](https://dev.twitter.com/cards/getting-started)
+- [Twitter Card validator](https://cards-dev.twitter.com/validator)
 
 Hashtags
 --------
