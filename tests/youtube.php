@@ -10,6 +10,7 @@
 <ul>
     <li><a href="youtube-player-iframe" target="_blank">Player iFrame (JS)</a></li>
     <li><a href="youtube-player-js" target="_blank">Player custom (JS : requireJS + videoJS)</a></li>
+    <li><a href="youtube-server-pulling.php" target="_blank">Server side pulling (PHP)</a></li>
 </ul>
 
 <!-- /////////////////////////////////////////////////////////////// -->
