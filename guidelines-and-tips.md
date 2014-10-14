@@ -99,6 +99,7 @@ Sharing to Twitter
 - Twitter sharing system is called `Twitter Cards`
 - It is possible to __share only URLs__ 
 - The shared content __twitter meta tags__ are used to display image, title and description within Twiter
+- Every type of card needs to be used with a domain __needs to be approved__ (using the Twitter Card validator)
 - [Twitter Cards doc](https://dev.twitter.com/cards/getting-started)
 - [Twitter Card validator](https://cards-dev.twitter.com/validator)
 

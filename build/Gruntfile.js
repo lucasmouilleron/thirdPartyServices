@@ -37,6 +37,7 @@ module.exports = function(grunt) {
           outputStyle:"compressed",
           relativeAssets:true,
           lineComments:false,
+          force:true,
           raw: "preferred_syntax = :sass\n",
           environment: "production"
         }
