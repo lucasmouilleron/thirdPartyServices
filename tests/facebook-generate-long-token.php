@@ -1,9 +1,7 @@
-<?php 
-require_once __DIR__."/facebook-commons.php";
-require_once __DIR__."/../includes/header.php";
-use Facebook\FacebookSession;
+<?php require_once __DIR__."/facebook-commons.php";?>
+<?php require_once __DIR__."/../includes/header.php";?>
 
-?>
+<?php use Facebook\FacebookSession;?>
 
 <!--/////////////////////////////////////////////////////////////-->
 <h1>Generate long live access token from short lived token</h1>

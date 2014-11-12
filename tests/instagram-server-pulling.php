@@ -1,7 +1,5 @@
-<?php
-require_once __DIR__."/instagram-commons.php";
-require_once __DIR__."/../includes/header.php";
-?>
+<?php require_once __DIR__."/instagram-commons.php";?>
+<?php require_once __DIR__."/../includes/header.php";?>
 
 <!-- /////////////////////////////////////////////////////////////-->
 <h1>Server side pulling as app (#nike)</h1>

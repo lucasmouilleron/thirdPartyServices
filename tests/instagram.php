@@ -1,6 +1,5 @@
-<!-- /////////////////////////////////////////////////////////////// -->
-<?php require_once __DIR__."/../includes/header.php" ?>
 <?php require_once __DIR__."/instagram-commons.php" ?>
+<?php require_once __DIR__."/../includes/header.php" ?>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">

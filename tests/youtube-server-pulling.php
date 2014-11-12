@@ -1,10 +1,5 @@
-<?php
-require_once __DIR__."/youtube-commons.php";
-require_once __DIR__."/../includes/header.php";
-
-
-
-?>
+<?php require_once __DIR__."/youtube-commons.php";?>
+<?php require_once __DIR__."/../includes/header.php";?>
 
 <!--/////////////////////////////////////////////////////////////-->
 <h1>Server side pulling (playlist <?php echo YOUTUBE_PLAYLIST_ID?>)</h1>

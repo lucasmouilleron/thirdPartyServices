@@ -1,6 +1,7 @@
+<?php require_once __DIR__."/facebook-commons.php";?>
+<?php require_once __DIR__."/../includes/header.php";?>
+
 <?php
-require_once __DIR__."/facebook-commons.php";
-require_once __DIR__."/../includes/header.php";
 use Facebook\FacebookSession;
 use Facebook\FacebookRequest;
 ?>
