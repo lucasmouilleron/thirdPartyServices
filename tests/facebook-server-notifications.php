@@ -17,7 +17,6 @@ $request = new FacebookRequest(
   "POST",
   "/".TEST_USER_ID."/notifications",
   array (
-
     "template" => "This is a test message",
     )
   );

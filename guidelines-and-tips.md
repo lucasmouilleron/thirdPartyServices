@@ -68,6 +68,7 @@ Facebook application and platforms
     - The forbidden interactions are then happehning in the _Canvas App_
     - The _Website App_ sends the user to the _Canvas App_ for social features (friends lists, notifications, invites, etc) and the _Canvas App_ sends the user to the _Website App_ to actually play the game or the experience
 - _Canvas App_ won't work on the mobile Facebook App
+- Add an app as a tab on a page : `https://www.facebook.com/dialog/pagetab?app_id=APP_ID&next=APP_URL` with APP_ID the app id and APP_URL the app url
 
 Graph API
 ---------
