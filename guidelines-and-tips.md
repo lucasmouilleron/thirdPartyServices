@@ -184,3 +184,25 @@ Google +
 
 Linkedin
 ========
+
+Google Tag Manager
+==================
+- Google Tag Manager (GTM) is a Google product which allows to deploy tags (Google Analytics, AdWords, etc.) frictionessly
+- Benefits : don't need to change the page code to add / modify tags
+- Mechanic : a container contains tags which are fired under certain conditions
+- Install :
+    - Create a container
+    - Add tags to the container (a Google Analytics Pageview tag for exemple)
+    - Add a rulle to the container (All page for exemple is `{{url}} matches RegEx .*`)
+    - Link the rule to the tag
+    - Publish the version
+    - Go to the Google Analytics live console to see traffic
+- Debug mode : 
+    - Go on a version, click `preview` and select the `debug` mode
+    - Go on the targeted website and a console is available there to debug the GTM
+- Macros and events :
+- Docs : 
+    - https://www.youtube.com/watch?x-yt-ts=1421828030&x-yt-cl=84411374&v=iknwOXX7jAs#t=533
+    - http://www.simoahava.com/analytics/form-tracking-google-tag-manager/#basics
+    - http://www.lunametrics.com/blog/2014/09/10/fire-virtual-pageview-google-tag-manager/#sr=g&m=o&cp=or&ct=-tmc&st=(opu%20qspwjefe)&ts=1421940589
+- Mobile : todo
