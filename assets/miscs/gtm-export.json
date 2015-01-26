@@ -1,0 +1,661 @@
+{
+  "exportFormatVersion": 1.3,
+  "exportTime": "2015-01-26 09:36:17",
+  "containerVersion": {
+    "accountId": "37989769",
+    "containerId": "972848",
+    "containerVersionId": "26",
+    "deleted": false,
+    "container": {
+      "accountId": "37989769",
+      "containerId": "972848",
+      "name": "test gtm lab",
+      "publicId": "GTM-5D9MC3",
+      "timeZoneCountryId": "FR",
+      "timeZoneId": "Europe/Paris",
+      "notes": "",
+      "usageContext": [
+        "WEB"
+      ],
+      "fingerprint": "1421945229229"
+    },
+    "macro": [
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "1",
+        "name": "url",
+        "type": "u",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "component",
+            "value": "URL"
+          }
+        ],
+        "fingerprint": "1421933384087"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "2",
+        "name": "url hostname",
+        "type": "u",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "component",
+            "value": "HOST"
+          }
+        ],
+        "fingerprint": "1421933384087"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "3",
+        "name": "url path",
+        "type": "u",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "component",
+            "value": "PATH"
+          }
+        ],
+        "fingerprint": "1421933384088"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "4",
+        "name": "referrer",
+        "type": "f",
+        "fingerprint": "1421933384088"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "5",
+        "name": "event",
+        "type": "e",
+        "fingerprint": "1421933384088"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "6",
+        "name": "element",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "ELEMENT"
+          }
+        ],
+        "fingerprint": "1421933384089"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "7",
+        "name": "element classes",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "CLASSES"
+          }
+        ],
+        "fingerprint": "1421933384089"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "8",
+        "name": "element id",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "ID"
+          }
+        ],
+        "fingerprint": "1421933384089"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "9",
+        "name": "element target",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "TARGET"
+          }
+        ],
+        "fingerprint": "1421933384089"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "10",
+        "name": "element text",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "TEXT"
+          }
+        ],
+        "fingerprint": "1421933384090"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "11",
+        "name": "element url",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "URL"
+          }
+        ],
+        "fingerprint": "1421933384090"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "12",
+        "name": "history new url fragment",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "HISTORY_NEW_URL_FRAGMENT"
+          }
+        ],
+        "fingerprint": "1421933384090"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "13",
+        "name": "history old url fragment",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "HISTORY_OLD_URL_FRAGMENT"
+          }
+        ],
+        "fingerprint": "1421933384091"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "14",
+        "name": "history new state",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "HISTORY_NEW_STATE"
+          }
+        ],
+        "fingerprint": "1421933384091"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "15",
+        "name": "history old state",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "HISTORY_OLD_STATE"
+          }
+        ],
+        "fingerprint": "1421933384091"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "16",
+        "name": "history change source",
+        "type": "aev",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "varType",
+            "value": "HISTORY_CHANGE_SOURCE"
+          }
+        ],
+        "fingerprint": "1421933384092"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "17",
+        "name": "data-gtm-event",
+        "type": "jsm",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "javascript",
+            "value": "function (){\nvar el = {{element}}, gtmDataEvent = el.getAttribute('data-gtm-event');\nreturn gtmDataEvent;\n}"
+          }
+        ],
+        "fingerprint": "1421942068270"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "macroId": "18",
+        "name": "search keywords",
+        "type": "jsm",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "javascript",
+            "value": "function() {\n  var inputField = document.getElementById(\"keywords\");\n  return inputField.value || \"\";\n}"
+          }
+        ],
+        "fingerprint": "1421944169712"
+      }
+    ],
+    "rule": [
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "ruleId": "1",
+        "name": "all pages",
+        "condition": [
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{url}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": ".*"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1421941143505"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "ruleId": "2",
+        "name": "gtm-event click",
+        "condition": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "gtm.click"
+              }
+            ]
+          },
+          {
+            "type": "MATCH_REGEX",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{data-gtm-event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "null"
+              },
+              {
+                "type": "BOOLEAN",
+                "key": "ignore_case",
+                "value": "true"
+              },
+              {
+                "type": "BOOLEAN",
+                "key": "negate",
+                "value": "true"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1421942937303"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "ruleId": "3",
+        "name": "search click",
+        "condition": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "gtm.click"
+              }
+            ]
+          },
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{element id}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "test-search"
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1421943040240"
+      }
+    ],
+    "tag": [
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "tagId": "1",
+        "name": "page analytics",
+        "type": "ua",
+        "firingRuleId": [
+          "1"
+        ],
+        "liveOnly": false,
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableEcommerce",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "useHashAutoLink",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "useDebugVersion",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "decorateFormsAutoLink",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "trackingId",
+            "value": "UA-55856069-2"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "trackType",
+            "value": "TRACK_PAGEVIEW"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "anonymizeIp",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableLinkId",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "allowLinker",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1421939330659"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "tagId": "2",
+        "name": "click listener",
+        "type": "cl",
+        "firingRuleId": [
+          "1"
+        ],
+        "liveOnly": false,
+        "fingerprint": "1421939241092"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "tagId": "3",
+        "name": "gtm-event event analytics",
+        "type": "ua",
+        "firingRuleId": [
+          "2"
+        ],
+        "liveOnly": false,
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableEcommerce",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "useDebugVersion",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "trackingId",
+            "value": "UA-55856069-2"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "trackType",
+            "value": "TRACK_EVENT"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "nonInteraction",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "anonymizeIp",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableLinkId",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "eventLabel",
+            "value": "{{data-gtm-event}}"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "eventAction",
+            "value": "event"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "eventCategory",
+            "value": "event"
+          }
+        ],
+        "fingerprint": "1421942751436"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "tagId": "4",
+        "name": "search event analytics",
+        "type": "ua",
+        "firingRuleId": [
+          "3"
+        ],
+        "liveOnly": false,
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableEcommerce",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "useDebugVersion",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "trackingId",
+            "value": "UA-55856069-2"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "trackType",
+            "value": "TRACK_EVENT"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "nonInteraction",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "anonymizeIp",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableLinkId",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "eventLabel",
+            "value": "{{search keywords}}"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "eventAction",
+            "value": "search"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "eventCategory",
+            "value": "event"
+          }
+        ],
+        "fingerprint": "1421945229229"
+      },
+      {
+        "accountId": "37989769",
+        "containerId": "972848",
+        "tagId": "5",
+        "name": "search page analytics",
+        "type": "ua",
+        "firingRuleId": [
+          "3"
+        ],
+        "liveOnly": false,
+        "parameter": [
+          {
+            "type": "BOOLEAN",
+            "key": "enableEcommerce",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "useHashAutoLink",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "page",
+            "value": "custom/search?q={{search keywords}}"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "useDebugVersion",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "decorateFormsAutoLink",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "trackingId",
+            "value": "UA-55856069-2"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "trackType",
+            "value": "TRACK_PAGEVIEW"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "anonymizeIp",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "enableLinkId",
+            "value": "false"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "allowLinker",
+            "value": "false"
+          }
+        ],
+        "fingerprint": "1421945217595"
+      }
+    ],
+    "fingerprint": "1421945232426"
+  }
+}
