@@ -6,13 +6,13 @@
   },
   "config": {
     "dirs": {
-      "sass": "./assets/css/scss",
-      "icons": "./assets/icons",
-      "imgSrc": "./assets/img",
-      "css": "./assets/css",
-      "img": "./assets/img",
-      "fonts": "./assets/fonts",
-      "js": "./assets/js"
+      "sass": "./web/assets/css/scss",
+      "icons": "./web/assets/icons",
+      "imgSrc": "./web/assets/img",
+      "css": "./web/assets/css",
+      "img": "./web/assets/img",
+      "fonts": "./web/assets/fonts",
+      "js": "./web/assets/js"
     },
     "cleanFiles": [
       "node_modules",
@@ -20,7 +20,7 @@
       "bower_components"
     ],
     "copyFiles": {
-      "./node_modules/video.js/dist/video-js/font/*": "./assets/fonts/"
+      "./node_modules/video.js/dist/video-js/font/*": "./web/assets/fonts/"
     }
   },
   "devDependencies": {
