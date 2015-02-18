@@ -1,0 +1,68 @@
+{
+  "name": "thirdPartyServices",
+  "version": "0.0.1",
+  "scripts": {
+    "postinstall": "bower cache clean && bower install"
+  },
+  "config": {
+    "dirs": {
+      "sass": "./assets/css/scss",
+      "icons": "./assets/icons",
+      "imgSrc": "./assets/img",
+      "css": "./assets/css",
+      "img": "./assets/img",
+      "fonts": "./assets/fonts",
+      "js": "./assets/js"
+    },
+    "cleanFiles": [
+      "node_modules",
+      ".sass-cache",
+      "bower_components"
+    ],
+    "copyFiles": {
+      "./node_modules/video.js/dist/video-js/font/*": "./assets/fonts/"
+    }
+  },
+  "devDependencies": {
+    "browserify": "^8.1.3",
+    "browserify-shim": "^3.8.2",
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^1.0.1",
+    "grunt-available-tasks": "^0.5.0",
+    "grunt-browserify": "^3.3.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-compass": "^0.8.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-shell": "^1.1.1"
+  },
+  "browser": {
+    "toc": "./bower_components/toc/dist/toc.js",
+    "videojs": "./bower_components/video.js/dist/video-js/video.js",
+    "videojs-youtube": "./bower_components/videojs-youtube/dist/vjs.youtube.js"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "toc": {
+      "depends": [
+        "jquery:jQuery"
+      ]
+    },
+    "videojs-youtube": {
+      "depends": [
+        "videojs"
+      ],
+      "exports": "videojs"
+    }
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.2",
+    "fb": "^0.7.0",
+    "ga-browserify": "^0.1.1",
+    "jquery": "^2.1.3"
+  }
+}

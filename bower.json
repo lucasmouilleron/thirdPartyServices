@@ -1,0 +1,8 @@
+{
+  "name": "thirdPartyServices",
+  "version": "0.0.0",
+  "dependencies": {
+    "toc": "~0.3.2",
+    "videojs-youtube": "~1.2.8"
+  }
+}
