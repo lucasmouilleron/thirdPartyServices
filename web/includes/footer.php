@@ -9,6 +9,7 @@
         </div>
 
         <!-- /////////////////////////////////////////////////////////////// -->
+        <script src="<?php echo BASE_URL?>/assets/js/libs/vendor/fb.js"></script>
         <script src="<?php echo BASE_URL?>/assets/js/_build.js"></script>
 
     </body>

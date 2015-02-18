@@ -1,4 +1,5 @@
 /////////////////////////////////////////////////////////////////////
+var window = require("global/window");
 var $ = require("jquery");
 var videoYoutube = require("videojs-youtube");
 var ga = require("ga-browserify");
@@ -54,42 +55,42 @@ $(function() {
 
     if($("#facebook-connect-js").length) {
         function showMe() {
-            fb.api("/me", function(response) {
+            FB.api("/me", function(response) {
                 $("#me").html("<pre>"+JSON.stringify(response)+"</pre>");
             });
         }
-        fb.init({
+        FB.init({
             appId : $("#facebook-connect-js").data("app-id")
         });
 
-        fb.getLoginStatus(function(response) {
+        FB.getLoginStatus(function(response) {
             $("#me").html("login in with cookie token");
             if (response.status === 'connected') {
-                    //$("#fb-login").hide();
+                    //$("#FB-login").hide();
                     showMe();
                 }
             });
         $("#fb-login").click(function() {
-            fb.login(function(response) {
+            FB.login(function(response) {
                 if (response.status === "connected") {
                     console.log(response.authResponse.accessToken);
                     showMe();
                 } else if (response.status === 'not_authorized') {
                     alert("not logged in to app");
                 } else {
-                    alert("not logged in to fb");
+                    alert("not logged in to FB");
                 }
             });
         });
     }
 
     if($("#facebook-invite-js").length) {
-        fb.init({
+        FB.init({
             appId: $("#facebook-invite-js").data("app-id")
         });
-        fb.getLoginStatus(function(response) {
+        FB.getLoginStatus(function(response) {
             if (response.status === "connected") {
-                fb.ui({method: "apprequests",
+                FB.ui({method: "apprequests",
                     message: "Invite test",
                     to: $("#facebook-invite-js").data("user-id")
                 }, function(response){
@@ -97,7 +98,7 @@ $(function() {
                 });
             }
             else {
-                fb.login();
+                FB.login();
             }
         });
     }
@@ -109,42 +110,42 @@ $(function() {
 
         if($("#facebook-connect-js").length) {
             function showMe() {
-                fb.api("/me", function(response) {
+                FB.api("/me", function(response) {
                     $("#me").html("<pre>"+JSON.stringify(response)+"</pre>");
                 });
             }
-            fb.init({
+            FB.init({
                 appId : $("#facebook-connect-js").data("app-id")
             });
             
-            fb.getLoginStatus(function(response) {
+            FB.getLoginStatus(function(response) {
                 $("#me").html("login in with cookie token");
                 if (response.status === 'connected') {
-                    //$("#fb-login").hide();
+                    //$("#FB-login").hide();
                     showMe();
                 }
             });
-            $("#fb-login").click(function() {
-                fb.login(function(response) {
+            $("#FB-login").click(function() {
+                FB.login(function(response) {
                     if (response.status === "connected") {
                         console.log(response.authResponse.accessToken);
                         showMe();
                     } else if (response.status === 'not_authorized') {
                         alert("not logged in to app");
                     } else {
-                        alert("not logged in to fb");
+                        alert("not logged in to FB");
                     }
                 });
             });
         }
 
         if($("#facebook-invite-js").length) {
-            fb.init({
+            FB.init({
                 appId: $("#facebook-invite-js").data("app-id")
             });
-            fb.getLoginStatus(function(response) {
+            FB.getLoginStatus(function(response) {
                 if (response.status === "connected") {
-                    fb.ui({method: "apprequests",
+                    FB.ui({method: "apprequests",
                         message: "Invite test",
                         to: $("#facebook-invite-js").data("user-id")
                     }, function(response){
@@ -152,7 +153,7 @@ $(function() {
                     });
                 }
                 else {
-                    fb.login();
+                    FB.login();
                 }
             });
         }

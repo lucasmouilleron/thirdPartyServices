@@ -61,8 +61,8 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.2",
-    "fb": "^0.7.0",
     "ga-browserify": "^0.1.1",
+    "global": "^4.3.0",
     "jquery": "^2.1.3"
   }
 }
