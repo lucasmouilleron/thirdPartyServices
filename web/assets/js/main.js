@@ -15,12 +15,12 @@ $(function() {
     });
 
     $("#ga-test2").click(function() {
-        tracker._setCustomVar(1, "Items Removed", "Yes", 2);
+        tracker._setCustomVar(1, "my var", "yes", 2);
         tracker._trackEvent("my cat", "my action", "my label");
     });
 
     $("#ga-test3").click(function() {
-        tracker._setCustomVar(1, "Items Removed", "Yes", 2);
+        tracker._setCustomVar(1, "my var", "no", 2);
         tracker._trackEvent("my cat", "my action", "my label");
     });
 
