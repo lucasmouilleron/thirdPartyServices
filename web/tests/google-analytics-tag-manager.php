@@ -2,9 +2,24 @@
 <?php require_once __DIR__."/../includes/header.php" ?>
 
 <!-- /////////////////////////////////////////////////////////////// -->
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5D9MC3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D9MC3');</script>
+<!-- End Google Tag Manager -->
+
+<!-- /////////////////////////////////////////////////////////////// -->
 <h1>Google Tag Manager</h1>
 
 <h2>Config</h2>
+<pre class="well">
+    GTM : GTM-5D9MC3
+</pre>
+
 <pre class="well">
     Tag 1 : page analytics -> page
     Tag 2 : gtm-event event analytics -> event, label = {data-gtm-event}}

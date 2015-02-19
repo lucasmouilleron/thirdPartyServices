@@ -9,7 +9,7 @@
 
 <ul>
     <li><a href="google-analytics-tag-manager" target="_blank">Google Tag Manager</a></li>
-    <li><a href="google-analytics-variables" target="_blank">Google Analytics variables</a></li>
+    <li><a href="google-analytics-js" target="_blank">Google Analytics JS</a></li>
 </ul>
 
 

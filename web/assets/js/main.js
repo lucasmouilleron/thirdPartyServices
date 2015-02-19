@@ -9,7 +9,7 @@ require("bootstrap");
 /////////////////////////////////////////////////////////////////////
 $(function() {
 
-    var tracker = ga("UA-55300212-1");
+    var tracker = ga($("#ga-tracker").text());
     $("#ga-test1").click(function() {
         tracker._trackPageview();
     });
