@@ -12,4 +12,11 @@ Gudelines, good pratices and tips we gathered wandering.
 
 Tests
 -----
-Some tests have been implemented. Use the navigation to explore them.
+Some tests have been implemented in `web/tests`. 
+Use the navigation to explore them.
+
+Build
+-----
+- `npm install && grunt build`
+- JS : `web/assets/js/main.js`
+- CSS : `web/assets/css/scss/main.scss`
